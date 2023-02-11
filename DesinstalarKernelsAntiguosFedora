@@ -1,11 +1,11 @@
 Listar todos los kernels instalados actualmente:
-rpm -qa kernel\* |sort -V
+$ rpm -qa kernel\* |sort -V
 
 Remueve los kernels más antiguos, deja los últimos 2 más recientes (ejecutar con sudo):
-dnf remove $(dnf repoquery --installonly --latest-limit=-2 -q)
+$ sudo dnf remove $(dnf repoquery --installonly --latest-limit=-2 -q)
 
 Dirección del archivo dnf.conf:
-/etc/dnf/dnf.conf
+$ sudo nano /etc/dnf/dnf.conf
 
 Parámetro que debemos modificar en el archivo dnf.conf:
 installonly_limit=2
